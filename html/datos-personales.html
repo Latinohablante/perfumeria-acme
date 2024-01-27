@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos personales - ACME</title>
+    <style>
+        body{ font-family: Helvetica Neue, Arial, Helvetica, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px; }
+		label{ display: block; font-weight: 500; margin-top: 20px; }
+		input, textarea { display: block; padding: 6px 12px; width: 100%; }
+		input[type="checkbox"], input[type="radio"] { display: inline-block; width: auto; }
+    </style>
 </head>
 <body>
     <h1>Datos personales - ACME</h1>
     <form action="">
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre">
+
         <label for="apellidos">Apellidos</label>
         <input type="text" name="apellidos">
-        <label for="nacionalidad">Nacionalidad</label>
-        <input type="text"name="nacionalidad">
-        <label for="sexo">Sexo</label>
-        <input type="text"name="sexo">
-        <label for="paisResidencia">País de residencia</label>
-        <input type="text" name="paisResidencia">
-        <label for="ciudadResidencia">Ciudad de residencia</label>
-        <input type="text"name="ciudadResidencia">
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo">
+          <option value="mujer">Mujer</option>
+          <option value="hombre">Hombre</option>
+          <option value="otro">Otro</option>
+          <option value="no-informo">No informo</option>
+        </select>
+
+        <label for="pais-residencia">País de Residencia:</label>
+        <select id="pais-residencia" name="pais-residencia">
+          <!-- Lista de países de América -->
+          <option value="argentina">Argentina</option>
+          <option value="brasil">Brasil</option>
+          <option value="colombia">Colombia</option>
+          <!-- Agrega el resto de países de América aquí -->
+
+        </select>
+
+        <label for="ciudad-residencia">Ciudad de Residencia:</label>
+        <select id="ciudad-residencia" name="ciudad-residencia">
+          <!-- Lista de municipios de Colombia -->
+          <option value="bogota">Bogotá</option>
+          <option value="medellin">Medellín</option>
+          <option value="todos">Todos los municipios</option>
+          <!-- Agrega el resto de municipios de Colombia aquí -->
+
+        </select>
+
         <label for="direccion">Direccion</label>
         <input type="text"name="direccion">
     </form>
+
 </body>
 </html>
